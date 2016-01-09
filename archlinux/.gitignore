@@ -1,0 +1,6 @@
+/home/
+/var/cache/
+/var/lib/pacman/sync/
+/var/log/
+*.pyc
+*.pyo
