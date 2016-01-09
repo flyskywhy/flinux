@@ -1,0 +1,36 @@
+%NAME%
+iana-etc
+
+%VERSION%
+2.30-5
+
+%DESC%
+/etc/protocols and /etc/services provided by IANA
+
+%URL%
+http://sethwklein.net/iana-etc.html
+
+%ARCH%
+any
+
+%BUILDDATE%
+1431440091
+
+%INSTALLDATE%
+1443719781
+
+%PACKAGER%
+Gaetan Bisson <bisson@archlinux.org>
+
+%SIZE%
+3849216
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+pgp
+

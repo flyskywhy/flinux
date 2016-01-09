@@ -1,0 +1,12 @@
+%FILES%
+usr/
+usr/bin/
+usr/bin/pinentry
+usr/bin/pinentry-curses
+usr/bin/pinentry-emacs
+usr/bin/pinentry-gtk-2
+usr/bin/pinentry-qt4
+usr/share/
+usr/share/info/
+usr/share/info/pinentry.info.gz
+

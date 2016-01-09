@@ -1,0 +1,36 @@
+%NAME%
+linux-api-headers
+
+%VERSION%
+4.1.4-1
+
+%DESC%
+Kernel headers sanitized for use in userspace
+
+%URL%
+http://www.gnu.org/software/libc
+
+%ARCH%
+i686
+
+%BUILDDATE%
+1438764901
+
+%INSTALLDATE%
+1443719781
+
+%PACKAGER%
+Allan McRae <allan@archlinux.org>
+
+%SIZE%
+3490816
+
+%REASON%
+1
+
+%LICENSE%
+GPL2
+
+%VALIDATION%
+pgp
+

@@ -1,0 +1,36 @@
+%NAME%
+hwids
+
+%VERSION%
+20150717-1
+
+%DESC%
+hardware identification databases
+
+%URL%
+https://github.com/gentoo/hwids
+
+%ARCH%
+any
+
+%BUILDDATE%
+1441397260
+
+%INSTALLDATE%
+1443719787
+
+%PACKAGER%
+Tobias Powalowski <tpowa@archlinux.org>
+
+%SIZE%
+1530880
+
+%REASON%
+1
+
+%LICENSE%
+GPL2
+
+%VALIDATION%
+pgp
+

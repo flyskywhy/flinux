@@ -1,0 +1,75 @@
+0.21    May 11, 2015
+New features
+* Full Windows 7 compatibility
+* futex: New event-based implementation which support win7
+* futex: Add support for FUTEX_REQUEUE and FUTEX_CMP_REQUEUE
+* main: Support command line options parsing
+* main: Add help and usage messages
+* dbt: Redesign x86 decoding table
+* dbt: Optimize push/pop opcode generation
+* dbt: Support --dbt-trace and --dbt-trace-all options
+* pipe: Correct poll() support
+* pipe: Add O_NONBLOCK support
+* process: Add CLONE_PARENT_SETTID and CLONE_CHILD_CLEARTID support
+* log: Increase time precision for logging
+* fork: Significant performance improvements
+
+Bug fixes
+* sig: Reset sigactions at execve()
+* dbt: Do not patch instruction if dbt just flushed in dbt_find_direct()
+* dbt: Fix several instruction descriptions
+* dbt: Stop code generation when code cache space is exhausted
+* str: Fix codepoint transformation range off by one
+* main: Fix ENV macros off by one
+* list: Fix list_remove() when list contains only one element
+
+0.2     Sep 13, 2015
+New features
+* Multi-threading: add clone(CLONE_THREAD) and futex() (Windows 8+ only)
+* In-process signal handling: rt_sigaction, rt_sigprocmask, rt_sigsuspend
+* Generation of SIGINT, SIGCHLD, and SIGWINCH signals
+* process_wait(): WNOHANG
+* Remove build dependency on dlltool
+* eventfd: Added
+* /dev/dsp: Added
+* vfs: Add ppoll() and pselect6()
+* vfs: Initial epoll() implementation
+* vfs: Implement basic nodes in /proc, /sys and /dev file systems
+* vfs: Support inter-process information query in /proc/[pid] file system
+* vfs: Add proper error messages for missing operations in file vtable
+* console: Alternate screen buffer
+* console: DEC special graphics charset
+* console: Swap In and Swap Out characters
+* console: DA2 query
+* console: Initial UTF-8 support
+* console: `CSI [ h' and `CSI [ l' supports multiple modes
+* console: Support character attributes 39 (default fg) and 49 (default bg)
+* Use red black tree for virtual address space management in mm and dbt
+* mmap(): Add MAP_SHARED support
+* clock_gettime(): CLOCK_MONOTONIC_COARSE and CLOCK_MONOTONIC_RAW
+* dbt: Add translation rules for FXSAVE and FXRSTOR instructions
+* dbt: Support code unloading
+* ioctl: FIOCLEX, FIONCLEX, FIONBIO
+* socket: Support POLLHUP events
+* socket: Add stat() function call
+* sockopt: SO_SNDBUF, SO_RCVBUF, SO_LINGER, SO_REUSEADDR
+* Add getrandom()
+* execve(): Recover on file opening failure
+* rename(): Allow replacing files in use
+* flog: Rewrite log viewer using custom control
+* flog: Improve logging performance substantially
+* flog: Highlight warnings/errors
+* flog: Add basic keyboard shortcuts
+
+Bug fixes
+* console: Fix initial termios.c_flag
+* console: Fix read() on VTIME > 0 should at least read one character
+* time(): Fix time calculation
+* readlink(): Fix fd leak
+* dbt: Fix instruction definition for BTR (0F B3)
+* getdents(): Fix not working in /dev
+* vfs_pselect6(): Clear fd set before returning an error
+* winfs: Fix file pointer changed in pread() and pwrite()
+
+0.1     May 11, 2015
+* Initial version

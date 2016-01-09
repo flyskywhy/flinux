@@ -1,0 +1,29 @@
+To install Arch Linux from another distribution, a root server rescue system or 
+a live system, follow the instructions at
+https://wiki.archlinux.org/index.php/Install_from_Existing_Linux. A short version
+is provided below:
+
+* Make sure your system is running Linux 2.6.32 or later.
+* Extract this tarball. If you have enough memory, you can extract it into a 
+  tmpfs file system. In the example below, we'll assume that you extracted it in
+  /tmp.
+* Enter the chroot:
+  + If you have bash 4 or later installed, run
+    # /tmp/root.x86_64/bin/arch-chroot /tmp/root.x86_64/
+  + If you don't have bash 4, run the following commands:
+    # cp /etc/resolv.conf /tmp/root.x86_64/etc
+    # mount --rbind /proc /tmp/root.x86_64/proc
+    # mount --rbind /sys /tmp/root.x86_64/sys
+    # mount --rbind /dev /tmp/root.x86_64/dev
+    (if /run exists on your system:
+      # mount --rbind /run /tmp/root.x86_64/run
+    )
+    # chroot /tmp/root.x86_64/
+* In the chroot
+  + Initialize the pacman keyring:
+    # pacman-key --init
+    # pacman-key --populate archlinux
+  + Mount the destination partition under /mnt
+* Follow the Arch Linux installation guide
+   https://wiki.archlinux.org/index.php/Installation_Guide#Install_the_base_system
+  starting at the "Install the base system" step.
