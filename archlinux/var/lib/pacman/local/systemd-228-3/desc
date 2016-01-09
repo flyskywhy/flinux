@@ -1,0 +1,75 @@
+%NAME%
+systemd
+
+%VERSION%
+228-3
+
+%DESC%
+system and service manager
+
+%URL%
+http://www.freedesktop.org/wiki/Software/systemd
+
+%ARCH%
+i686
+
+%BUILDDATE%
+1448482728
+
+%INSTALLDATE%
+1452351718
+
+%PACKAGER%
+Evangelos Foutras <evangelos@foutrelis.com>
+
+%SIZE%
+28741632
+
+%LICENSE%
+GPL2
+LGPL2.1
+
+%VALIDATION%
+sha256
+
+%REPLACES%
+nss-myhostname
+systemd-tools
+udev
+
+%DEPENDS%
+acl
+bash
+dbus
+iptables
+kbd
+kmod
+hwids
+libcap
+libgcrypt
+libsystemd
+libidn
+lz4
+pam
+libelf
+libseccomp
+util-linux
+xz
+
+%OPTDEPENDS%
+cryptsetup: required for encrypted block devices
+libmicrohttpd: remote journald capabilities
+quota-tools: kernel-level quota management
+systemd-sysvcompat: symlink package to provide sysvinit binaries
+polkit: allow administration as unprivileged user
+
+%CONFLICTS%
+nss-myhostname
+systemd-tools
+udev
+
+%PROVIDES%
+nss-myhostname
+systemd-tools=228
+udev=228
+

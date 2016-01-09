@@ -29,7 +29,7 @@
 MACHINE="i686"
 OS="linux-gnu"
 CC="gcc"
-CFLAGS=" -DPROGRAM='bash' -DCONF_HOSTTYPE='i686' -DCONF_OSTYPE='linux-gnu' -DCONF_MACHTYPE='i686-pc-linux-gnu' -DCONF_VENDOR='pc' -DLOCALEDIR='/usr/share/locale' -DPACKAGE='bash' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib  -D_FORTIFY_SOURCE=2 -march=i686 -mtune=generic -O2 -pipe -fstack-protector-strong --param=ssp-buffer-size=4 -DDEFAULT_PATH_VALUE='/usr/local/sbin:/usr/local/bin:/usr/bin' -DSTANDARD_UTILS_PATH='/usr/bin' -DSYS_BASHRC='/etc/bash.bashrc' -DSYS_BASH_LOGOUT='/etc/bash.bash_logout'"
+CFLAGS=" -DPROGRAM='bash' -DCONF_HOSTTYPE='i686' -DCONF_OSTYPE='linux-gnu' -DCONF_MACHTYPE='i686-pc-linux-gnu' -DCONF_VENDOR='pc' -DLOCALEDIR='/usr/share/locale' -DPACKAGE='bash' -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I./include -I./lib  -D_FORTIFY_SOURCE=2 -march=i686 -mtune=generic -O2 -pipe -fstack-protector-strong -DDEFAULT_PATH_VALUE='/usr/local/sbin:/usr/local/bin:/usr/bin' -DSTANDARD_UTILS_PATH='/usr/bin' -DSYS_BASHRC='/etc/bash.bashrc' -DSYS_BASH_LOGOUT='/etc/bash.bash_logout'"
 RELEASE="4.3"
 PATCHLEVEL="42"
 RELSTATUS="release"

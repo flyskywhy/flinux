@@ -9,4 +9,4 @@ URL: http://www.archlinux.org/pacman/
 Version: 9.0.1
 Cflags: -I${includedir}
 Libs: -L${libdir} -lalpm
-Libs.private: -lm  -larchive  -lcrypto  -lcurl  -lgpgme -lassuan -lgpg-error
+Libs.private: -lm  -larchive -lcrypto -lcurl -lgpgme -lassuan -lgpg-error

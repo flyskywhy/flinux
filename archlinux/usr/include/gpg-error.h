@@ -28,12 +28,12 @@
 #include <stdarg.h>
 
 /* The version string of this header. */
-#define GPG_ERROR_VERSION "1.20"
-#define GPGRT_VERSION     "1.20"
+#define GPG_ERROR_VERSION "1.21"
+#define GPGRT_VERSION     "1.21"
 
 /* The version number of this header. */
-#define GPG_ERROR_VERSION_NUMBER 0x011400
-#define GPGRT_VERSION_NUMBER     0x011400
+#define GPG_ERROR_VERSION_NUMBER 0x011500
+#define GPGRT_VERSION_NUMBER     0x011500
 
 
 #ifdef __GNUC__
@@ -343,6 +343,9 @@ typedef enum
     GPG_ERR_SEXP_BAD_HEX_CHAR = 211,
     GPG_ERR_SEXP_ODD_HEX_NUMBERS = 212,
     GPG_ERR_SEXP_BAD_OCT_CHAR = 213,
+    GPG_ERR_SERVER_FAILED = 219,
+    GPG_ERR_NO_NAME = 220,
+    GPG_ERR_NO_KEY = 221,
     GPG_ERR_LEGACY_KEY = 222,
     GPG_ERR_REQUEST_TOO_SHORT = 223,
     GPG_ERR_REQUEST_TOO_LONG = 224,
@@ -376,6 +379,8 @@ typedef enum
     GPG_ERR_KEY_DISABLED = 252,
     GPG_ERR_KEY_ON_CARD = 253,
     GPG_ERR_INV_LOCK_OBJ = 254,
+    GPG_ERR_TRUE = 255,
+    GPG_ERR_FALSE = 256,
     GPG_ERR_ASS_GENERAL = 257,
     GPG_ERR_ASS_ACCEPT_FAILED = 258,
     GPG_ERR_ASS_CONNECT_FAILED = 259,
@@ -654,7 +659,7 @@ typedef enum
 
 /* We would really like to use bit-fields in a struct, but using
    structs as return values can cause binary compatibility issues, in
-   particular if you want to do it effeciently (also see
+   particular if you want to do it efficiently (also see
    -freg-struct-return option to GCC).  */
 typedef unsigned int gpg_error_t;
 
@@ -1055,7 +1060,7 @@ enum gpgrt_syshd_types
     GPGRT_SYSHD_NONE = 0,  /* No system handle available.                   */
     GPGRT_SYSHD_FD = 1,    /* A file descriptor as returned by open().      */
     GPGRT_SYSHD_SOCK = 2,  /* A socket as returned by socket().             */
-    GPGRT_SYSHD_RVID = 3,  /* A rendevous id (see libassuan's gpgcedev.c).  */
+    GPGRT_SYSHD_RVID = 3,  /* A rendezvous id (see libassuan's gpgcedev.c).  */
     GPGRT_SYSHD_HANDLE = 4 /* A HANDLE object (Windows).                    */
   };
 
@@ -1077,6 +1082,32 @@ typedef struct _gpgrt_syshd es_syshd_t;
 #define ES_SYSHD_SOCK   GPGRT_SYSHD_SOCK
 #define ES_SYSHD_RVID   GPGRT_SYSHD_RVID
 #define ES_SYSHD_HANDLE GPGRT_SYSHD_HANDLE
+#endif
+
+/* The object used with gpgrt_poll.  */
+struct _gpgrt_poll_s
+{
+  gpgrt_stream_t stream;
+  unsigned int want_read:1;
+  unsigned int want_write:1;
+  unsigned int want_oob:1;
+  unsigned int want_rdhup:1;
+  unsigned int _reserv1:4;
+  unsigned int got_read:1;
+  unsigned int got_write:1;
+  unsigned int got_oob:1;
+  unsigned int got_rdhup:1;
+  unsigned int _reserv2:4;
+  unsigned int got_err:1;
+  unsigned int got_hup:1;
+  unsigned int got_nval:1;
+  unsigned int _reserv3:4;
+  unsigned int ignore:1;
+  unsigned int user:8;       /* For application use.  */
+};
+typedef struct _gpgrt_poll_s gpgrt_poll_t;
+#ifdef GPGRT_ENABLE_ES_MACROS
+typedef struct _gpgrt_poll_s es_poll_t;
 #endif
 
 gpgrt_stream_t gpgrt_fopen (const char *_GPGRT__RESTRICT path,
@@ -1236,6 +1267,10 @@ void gpgrt_setbuf (gpgrt_stream_t _GPGRT__RESTRICT stream,
                    char *_GPGRT__RESTRICT buf);
 
 void gpgrt_set_binary (gpgrt_stream_t stream);
+int  gpgrt_set_nonblock (gpgrt_stream_t stream, int onoff);
+int  gpgrt_get_nonblock (gpgrt_stream_t stream);
+
+int gpgrt_poll (gpgrt_poll_t *fdlist, unsigned int nfds, int timeout);
 
 gpgrt_stream_t gpgrt_tmpfile (void);
 
@@ -1331,6 +1366,9 @@ int gpgrt_vsnprintf (char *buf,size_t bufsize,
 # define es_setvbuf           gpgrt_setvbuf
 # define es_setbuf            gpgrt_setbuf
 # define es_set_binary        gpgrt_set_binary
+# define es_set_nonblock      gpgrt_set_nonblock
+# define es_get_nonblock      gpgrt_get_nonblock
+# define es_poll              gpgrt_poll
 # define es_tmpfile           gpgrt_tmpfile
 # define es_opaque_set        gpgrt_opaque_set
 # define es_opaque_get        gpgrt_opaque_get

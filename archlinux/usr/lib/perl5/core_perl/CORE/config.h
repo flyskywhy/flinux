@@ -9,9 +9,9 @@
 
 /* Package name      : perl5
  * Source directory  : .
- * Configuration time: Tue Jun  2 09:41:38 CEST 2015
+ * Configuration time: Tue Dec 15 10:00:24 CET 2015
  * Configured by     : builduser
- * Target system     : linux flo-32 4.0.4-2-arch #1 smp preempt fri may 22 03:05:23 utc 2015 i686 gnulinux 
+ * Target system     : linux flo-32 4.3.2-1-arch #1 smp preempt fri dec 11 07:19:47 cet 2015 i686 gnulinux 
  */
 
 #ifndef _config_h_
@@ -883,7 +883,7 @@
  *	feature tests from Configure are generally more reliable.
  */
 #define OSNAME "linux"		/**/
-#define OSVERS "4.0.4-2-arch"		/**/
+#define OSVERS "4.3.2-1-arch"		/**/
 
 /* MULTIARCH:
  *	This symbol, if defined, signifies that the build
