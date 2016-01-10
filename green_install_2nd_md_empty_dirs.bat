@@ -1,4 +1,3 @@
-md archlinux\foo\bar
 md archlinux\boot
 md archlinux\dev
 md archlinux\etc\binfmt.d
