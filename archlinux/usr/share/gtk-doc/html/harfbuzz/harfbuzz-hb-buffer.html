@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>hb-buffer: HarfBuzz Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<link rel="home" href="index.html" title="HarfBuzz Manual">
+<link rel="up" href="ch06.html" title="Harfbuzz API">
+<link rel="prev" href="harfbuzz-hb-unicode.html" title="hb-unicode">
+<link rel="next" href="harfbuzz-hb-blob.html" title="hb-blob">
+<meta name="generator" content="GTK-Doc V1.24.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#harfbuzz-hb-buffer.description" class="shortcut">Description</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch06.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="harfbuzz-hb-unicode.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="harfbuzz-hb-blob.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="harfbuzz-hb-buffer"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="harfbuzz-hb-buffer.top_of_page"></a>hb-buffer</span></h2>
+<p>hb-buffer</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="harfbuzz-hb-buffer.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="150px" class="name">
+<col class="description">
+</colgroup>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-buffer.html#HB-SEGMENT-PROPERTIES-DEFAULT:CAPS" title="HB_SEGMENT_PROPERTIES_DEFAULT">HB_SEGMENT_PROPERTIES_DEFAULT</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-content-type-t" title="enum hb_buffer_content_type_t">hb_buffer_content_type_t</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-flags-t" title="enum hb_buffer_flags_t">hb_buffer_flags_t</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-serialize-flags-t" title="enum hb_buffer_serialize_flags_t">hb_buffer_serialize_flags_t</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-serialize-format-t" title="enum hb_buffer_serialize_format_t">hb_buffer_serialize_format_t</a></td>
+</tr>
+<tr>
+<td class="typedef_keyword">typedef</td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-buffer.html#hb-buffer-t" title="hb_buffer_t">hb_buffer_t</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-info-t" title="hb_glyph_info_t">hb_glyph_info_t</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-buffer.html#hb-glyph-position-t" title="hb_glyph_position_t">hb_glyph_position_t</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword"> </td>
+<td class="function_name"><a class="link" href="harfbuzz-hb-buffer.html#hb-segment-properties-t" title="hb_segment_properties_t">hb_segment_properties_t</a></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-buffer.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-buffer.functions_details"></a><h2>Functions</h2>
+<p></p>
+</div>
+<div class="refsect1">
+<a name="harfbuzz-hb-buffer.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="HB-SEGMENT-PROPERTIES-DEFAULT:CAPS"></a><h3>HB_SEGMENT_PROPERTIES_DEFAULT</h3>
+<pre class="programlisting">#define             HB_SEGMENT_PROPERTIES_DEFAULT</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-buffer-content-type-t"></a><h3>enum hb_buffer_content_type_t</h3>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.3.3"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-CONTENT-TYPE-INVALID:CAPS"></a>HB_BUFFER_CONTENT_TYPE_INVALID</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-CONTENT-TYPE-UNICODE:CAPS"></a>HB_BUFFER_CONTENT_TYPE_UNICODE</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-CONTENT-TYPE-GLYPHS:CAPS"></a>HB_BUFFER_CONTENT_TYPE_GLYPHS</p></td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-buffer-flags-t"></a><h3>enum hb_buffer_flags_t</h3>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.4.3"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-DEFAULT:CAPS"></a>HB_BUFFER_FLAG_DEFAULT</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-BOT:CAPS"></a>HB_BUFFER_FLAG_BOT</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-EOT:CAPS"></a>HB_BUFFER_FLAG_EOT</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-FLAG-PRESERVE-DEFAULT-IGNORABLES:CAPS"></a>HB_BUFFER_FLAG_PRESERVE_DEFAULT_IGNORABLES</p></td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-buffer-serialize-flags-t"></a><h3>enum hb_buffer_serialize_flags_t</h3>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.5.3"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-SERIALIZE-FLAG-DEFAULT:CAPS"></a>HB_BUFFER_SERIALIZE_FLAG_DEFAULT</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-SERIALIZE-FLAG-NO-CLUSTERS:CAPS"></a>HB_BUFFER_SERIALIZE_FLAG_NO_CLUSTERS</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-SERIALIZE-FLAG-NO-POSITIONS:CAPS"></a>HB_BUFFER_SERIALIZE_FLAG_NO_POSITIONS</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-SERIALIZE-FLAG-NO-GLYPH-NAMES:CAPS"></a>HB_BUFFER_SERIALIZE_FLAG_NO_GLYPH_NAMES</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-SERIALIZE-FLAG-GLYPH-EXTENTS:CAPS"></a>HB_BUFFER_SERIALIZE_FLAG_GLYPH_EXTENTS</p></td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-buffer-serialize-format-t"></a><h3>enum hb_buffer_serialize_format_t</h3>
+<div class="refsect3">
+<a name="id-1.3.2.5.6.6.3"></a><h4>Members</h4>
+<div class="informaltable"><table width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-SERIALIZE-FORMAT-TEXT:CAPS"></a>HB_BUFFER_SERIALIZE_FORMAT_TEXT</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-SERIALIZE-FORMAT-JSON:CAPS"></a>HB_BUFFER_SERIALIZE_FORMAT_JSON</p></td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="HB-BUFFER-SERIALIZE-FORMAT-INVALID:CAPS"></a>HB_BUFFER_SERIALIZE_FORMAT_INVALID</p></td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-buffer-t"></a><h3>hb_buffer_t</h3>
+<pre class="programlisting">typedef struct hb_buffer_t hb_buffer_t;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-glyph-info-t"></a><h3>hb_glyph_info_t</h3>
+<pre class="programlisting">typedef struct {
+  hb_codepoint_t codepoint;
+  hb_mask_t      mask;
+  uint32_t       cluster;
+} hb_glyph_info_t;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-glyph-position-t"></a><h3>hb_glyph_position_t</h3>
+<pre class="programlisting">typedef struct {
+  hb_position_t  x_advance;
+  hb_position_t  y_advance;
+  hb_position_t  x_offset;
+  hb_position_t  y_offset;
+} hb_glyph_position_t;
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="hb-segment-properties-t"></a><h3>hb_segment_properties_t</h3>
+<pre class="programlisting">typedef struct {
+  hb_direction_t  direction;
+  hb_script_t     script;
+  hb_language_t   language;
+} hb_segment_properties_t;
+</pre>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.24.1</div>
+</body>
+</html>

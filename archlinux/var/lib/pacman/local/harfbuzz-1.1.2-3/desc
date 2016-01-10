@@ -1,0 +1,44 @@
+%NAME%
+harfbuzz
+
+%VERSION%
+1.1.2-3
+
+%DESC%
+OpenType text shaping engine
+
+%URL%
+http://www.freedesktop.org/wiki/Software/HarfBuzz
+
+%ARCH%
+i686
+
+%BUILDDATE%
+1449405557
+
+%INSTALLDATE%
+1452384996
+
+%PACKAGER%
+Bartłomiej Piotrowski <bpiotrowski@archlinux.org>
+
+%SIZE%
+1330176
+
+%REASON%
+1
+
+%LICENSE%
+MIT
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+glib2
+freetype2
+graphite
+
+%OPTDEPENDS%
+cairo: hb-view program
+

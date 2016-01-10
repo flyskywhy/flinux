@@ -1,0 +1,36 @@
+%NAME%
+scrnsaverproto
+
+%VERSION%
+1.2.2-2
+
+%DESC%
+X11 Screen Saver extension wire protocol
+
+%URL%
+http://xorg.freedesktop.org/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1404364134
+
+%INSTALLDATE%
+1452384992
+
+%PACKAGER%
+Felix Yan <felixonmars@gmail.com>
+
+%SIZE%
+93184
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+

@@ -1,0 +1,36 @@
+%NAME%
+xproto
+
+%VERSION%
+7.0.28-1
+
+%DESC%
+X11 core wire protocol and auxiliary headers
+
+%URL%
+http://xorg.freedesktop.org/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1435765500
+
+%INSTALLDATE%
+1452384977
+
+%PACKAGER%
+Laurent Carlier <lordheavym@gmail.com>
+
+%SIZE%
+1196032
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+

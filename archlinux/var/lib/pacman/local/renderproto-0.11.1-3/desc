@@ -1,0 +1,36 @@
+%NAME%
+renderproto
+
+%VERSION%
+0.11.1-3
+
+%DESC%
+X11 Render extension wire protocol
+
+%URL%
+http://xorg.freedesktop.org/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1404360679
+
+%INSTALLDATE%
+1452384999
+
+%PACKAGER%
+Felix Yan <felixonmars@gmail.com>
+
+%SIZE%
+109568
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+
