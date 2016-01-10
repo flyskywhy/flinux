@@ -1,0 +1,36 @@
+%NAME%
+fontsproto
+
+%VERSION%
+2.1.3-1
+
+%DESC%
+X11 font extension wire protocol
+
+%URL%
+http://xorg.freedesktop.org/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1397498476
+
+%INSTALLDATE%
+1452389631
+
+%PACKAGER%
+Laurent Carlier <lordheavym@gmail.com>
+
+%SIZE%
+304128
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+

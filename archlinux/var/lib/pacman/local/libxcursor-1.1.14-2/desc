@@ -1,0 +1,43 @@
+%NAME%
+libxcursor
+
+%VERSION%
+1.1.14-2
+
+%DESC%
+X cursor management library
+
+%URL%
+http://xorg.freedesktop.org/
+
+%ARCH%
+i686
+
+%BUILDDATE%
+1401797816
+
+%INSTALLDATE%
+1452390160
+
+%PACKAGER%
+Jan de Groot <jgc@archlinux.org>
+
+%SIZE%
+65536
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+libxfixes
+libxrender
+
+%OPTDEPENDS%
+gnome-themes-standard: fallback icon theme
+

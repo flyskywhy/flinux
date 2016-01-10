@@ -1,0 +1,36 @@
+%NAME%
+randrproto
+
+%VERSION%
+1.5.0-1
+
+%DESC%
+X11 RandR extension wire protocol
+
+%URL%
+http://xorg.freedesktop.org/
+
+%ARCH%
+any
+
+%BUILDDATE%
+1431939354
+
+%INSTALLDATE%
+1452390159
+
+%PACKAGER%
+Jan de Groot <jgc@archlinux.org>
+
+%SIZE%
+140288
+
+%REASON%
+1
+
+%LICENSE%
+custom
+
+%VALIDATION%
+sha256
+
